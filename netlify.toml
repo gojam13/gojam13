@@ -1,0 +1,13 @@
+[build]
+  base = "gojam13/gojam13" # Base directory where Netlify installs dependencies and runs your build command
+  publish = "gojam13/gojam13/build" # Directory to publish (e.g., where your build output is located)
+  command = "npm run build" # Command to build your site
+
+[functions]
+  directory = "gojam13/gojam13/functions" # Directory for Netlify Functions
+
+[build.environment]
+  NODE_VERSION = "14"
+
+[context.production.environment]
+  NODE_ENV = "production"
